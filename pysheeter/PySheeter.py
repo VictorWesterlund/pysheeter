@@ -10,22 +10,11 @@ class Sprite:
 
 		# Resize image to size[width,height] if nessesary
 		if(self.image.width != size[0] or self.image.height != size[1]):
-			self.resize()
+			self.resize(size)
 
 	# Resize image without maintaining aspect ratio
-	def resize(self,resample=Image.BICUBIC):
-		rw = self.image.width
-		rh = self.image.height
-
-		# Scale image width
-		if(rw != size[0]):
-			rw = int(self.image.height * self.image.width / size[0])
-
-		# Scale image height
-		if(rh != size[1]):
-			rh = int(self.image.width * size[1] / self.image.height)
-
-		self.image = self.image.resize((rw,rh),resample)
+	def resize(self,size,resample=Image.LANCZOS):
+		self.image = self.image.resize((size[0],size[1]),resample)
 
 # --------------------------------
 
@@ -40,8 +29,10 @@ class Sheet:
 			self.path = Path(folder).glob("**/*.png")
 			self.sprites = [x for x in self.path]
 
+			print(f"Loaded {len(self.sprites)} sprites")
+
 	# Concatinate sprites vertically
-	def concat(self,size):
+	def concatV(self,size):
 		sheet = Image.new("RGBA",(size[0],size[1] * len(self.sprites)))
 
 		for i, sprite in enumerate(self.sprites):
@@ -49,13 +40,29 @@ class Sheet:
 
 		return sheet
 
+	# Concatinate sprites horizontally
+	def concatH(self,size):
+		sheet = Image.new("RGBA",(size[0] * len(self.sprites),size[1]))
+
+		for i, sprite in enumerate(self.sprites):
+			sheet.paste(Sprite(sprite,size).image,(size[0] * i,0))
+
+		return sheet
+
 	# Add sprite by path
 	def add(self,path):
 		self.sprites.append(path)
 
+	# Remove sprite by path
+	def remove(self,path):
+		self.sprites.remove(path)
+
 	# Create and save spritesheet
-	def put(self,dest,size):
-		sheet = self.concat(size)
+	def put(self,dest,size,vertical = True):
+		if(vertical):
+			sheet = self.concatV(size)
+		else:
+			sheet = self.concatH(size)
+
 		sheet.save(dest)
-		
-		print(len(self.sprites))
+		print(f"Saved spritesheet to '{dest}'")
