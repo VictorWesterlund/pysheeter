@@ -1,1 +1,1 @@
-from lib import PySheeter
+from pysheeter import PySheeter
