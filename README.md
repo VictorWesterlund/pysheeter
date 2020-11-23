@@ -3,9 +3,9 @@ Lightweight Pillow Python-script to create and scale sprite sheets from PNGs in 
 
 ## Get started / Basic usage
 1. Download and install [Python 3](https://www.python.org/downloads/) for your architecture
-2. Download and install [Pillow](https://pypi.org/project/Pillow/) for Python 3 with `pip3`
+2. Install the latest version of PySheeter with [`pip3`](https://pypi.org/project/pysheeter-VicW/)
 ```bash
-$ pip3 install Pillow
+$ pip3 install pysheeter-VicW
 ```
 ### Sprite sheet from folder
 1. Import `Sheet` from `pysheeter`
