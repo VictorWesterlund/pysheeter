@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: pysheeter-VicW
-Version: 1.0.1
+Name: pysheeter
+Version: 1.0.2
 Summary: Lightweight Python-script to create sprite sheets from transparent PNGs with Pillow
 Home-page: https://github.com/VictorWesterlund/pysheeter
 Author: VicW
@@ -11,9 +11,9 @@ Description: # PySheeter
         
         ## Get started / Basic usage
         1. Download and install [Python 3](https://www.python.org/downloads/) for your architecture
-        2. Download and install [Pillow](https://pypi.org/project/Pillow/) for Python 3 with `pip3`
+        2. Install the latest version of PySheeter with [`pip3`](https://pypi.org/project/pysheeter-VicW/)
         ```bash
-        $ pip3 install Pillow
+        $ pip3 install pysheeter-VicW
         ```
         ### Sprite sheet from folder
         1. Import `Sheet` from `pysheeter`

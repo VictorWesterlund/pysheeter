@@ -1,7 +1,0 @@
-README.md
-setup.py
-pysheeter_VicW.egg-info/PKG-INFO
-pysheeter_VicW.egg-info/SOURCES.txt
-pysheeter_VicW.egg-info/dependency_links.txt
-pysheeter_VicW.egg-info/requires.txt
-pysheeter_VicW.egg-info/top_level.txt
