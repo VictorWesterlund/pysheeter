@@ -1,20 +1,20 @@
 # PySheeter
-Lightweight Pillow Python-script to create and scale sprite sheets from PNGs in folders or individually
+Lightweight Pillow Python package to create and scale sprite sheets from individual PNGs or whole folders
 
 ## Get started / Basic usage
 1. Download and install [Python 3](https://www.python.org/downloads/) for your architecture
-2. Install the latest version of PySheeter with [`pip3`](https://pypi.org/project/pysheeter-VicW/)
+2. Install the latest build of PySheeter with [`pip3`](https://pypi.org/project/pysheeter/)
 ```bash
-$ pip3 install pysheeter-VicW
+$ python3 -m pip install pysheeter
 ```
 ### Sprite sheet from folder
 1. Import `Sheet` from `pysheeter`
 ```python
-from pysheeter import Sheet
+from pysheeter import PySheeter
 ```
 2. Initialize the class with a path to your PNG-folder
 ```python
-spritesheet = pysheeter.Sheet("example/")
+spritesheet = PySheeter.Sheet("example/")
 ```
 3. Create a sprite sheet with `put()`
 ```python
@@ -41,11 +41,11 @@ spritesheet.put("example_h1632.png",(16,32),False)
 ### Sprite sheet from individual PNG-images
 1. Import `Sheet` from `pysheeter`
 ```python
-from pysheeter import Sheet
+from pysheeter import PySheeter
 ```
 2. Initialize the class without any arguments
 ```python
-spritesheet = pysheeter.Sheet()
+spritesheet = PySheeter.Sheet()
 ```
 3. Add PNG-images with `add()`
 ```python
