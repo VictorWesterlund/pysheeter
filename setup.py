@@ -5,7 +5,7 @@ with open("README.md","r") as fh:
 
 setuptools.setup(
     name="pysheeter-VicW",
-    version="1.0.0",
+    version="1.0.1",
     author="VicW",
     author_email="victor.vesterlund@gmail.com",
     description="Lightweight Python-script to create sprite sheets from transparent PNGs with Pillow",

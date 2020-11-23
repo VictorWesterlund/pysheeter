@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pysheeter-VicW
-Version: 1.0.0
+Version: 1.0.1
 Summary: Lightweight Python-script to create sprite sheets from transparent PNGs with Pillow
 Home-page: https://github.com/VictorWesterlund/pysheeter
 Author: VicW
