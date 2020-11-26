@@ -3,9 +3,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/VictorWesterlund/pysheeter)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020)
 
-![GitHub](https://img.shields.io/github/license/VictorWesterlund/pysheeter)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/VictorWesterlund/pysheeter)
-
 Lightweight Pillow Python package to create and scale sprite sheets from individual PNGs or whole folders
 
 ## Get started / Basic usage
