@@ -1,0 +1,2 @@
+# The requirements in setup.py should also be updated when changing this
+pillow
